@@ -1,0 +1,343 @@
+/*
+Theme Name: 	Starkers
+Theme URI: 		http://viewportindustries.com/products/starkers
+Description: 	The totally nude Wordpress theme!
+Version: 		4.0
+Author: 		Elliot Jay Stocks & Keir Whitaker
+Author URI: 	http://viewportindustries.com
+Tags: 			starkers, naked, clean, basic
+*/
+
+/*
+===========================
+CONTENTS:
+
+01 Sensible defaults
+02 Typography
+03 Media queries 
+===========================
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+@import "css/reset.css";
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
+.group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
+body 				{ background:#fff; /* Don't forget to style your body to avoid user overrides */ }
+::-moz-selection 	{ background:#ff0; color:#333; }
+::selection 		{ background:#ff0; color:#333; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+02 Typography -----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/*
+
+14 / 16	= 		0.875em 		(14px equivalent)
+16 / 16	= 		1em 			(16px equivalent)
+18 / 16 = 		1.125em 		(18px equivalent)
+21 / 16 = 		1.3125em 		(21px equivalent)
+24 / 16 = 		1.5em 			(24px equivalent)
+30 / 16 = 		1.875em 		(30px equivalent)
+
+*/
+
+body,
+input,
+textarea 			{ /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ }
+
+/*h1, 
+h2, 
+h3, */
+h4, 
+h5, 
+h6 					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+03 Media queries (using a mobile-first approach) ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+body{
+		background-color: #FFF;
+		font-size: 100%;
+	}
+
+	h1{
+		font-family: 'Playfair Display', serif;
+	}
+
+	h2{
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+	}
+
+	h3{
+		font-family: Helvetica, Arial, sans-serif;
+	}
+
+	li{
+		font-family: Helvetica, Arial, sans-serif;
+	}
+
+	p{
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+
+	.body-container{
+		/*background-color: rgb(125, 174, 239);*/
+		background-color: #EEE;
+		margin: 20px;
+		height: 100%;
+		padding: 20px;
+	}
+
+	.front-page-header{
+		text-align: center;
+	}	
+
+	.navbar li{
+		display: inline-block;
+		padding: 30px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+	}	
+
+	.col-row{
+		width: 100%;
+	}
+	.col-10{
+		width: 8%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-20{
+		width: 18%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-30{
+		width: 28%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-40{
+		width: 38%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-50{
+		width: 48%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-60{
+		width: 58%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-70{
+		width: 68%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-80{
+		width: 78%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-90{
+		width: 88%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.col-100{
+		width: 98%;
+		display:inline-block;
+		margin-right: 1%;
+	}
+	.last-col{
+		margin-right: 0;
+	}
+
+	.col-33{
+		width: 32%;
+		display: inline-block;
+		margin-right: 1%;
+		float: left;
+	}
+
+	.project-placeholder{
+		position: relative;
+		background-color: black;
+		width: 100%;
+		height: 200px;
+		z-index: 2;
+		visibility: hidden;
+	}
+
+	.project-marquee:hover + .project-placeholder{
+		visibility: visible;
+	}
+
+	.project-unit{
+		margin: 20px auto;
+		width: 75%;
+
+	}
+
+	.portfolio-text{
+		text-align: center;
+		position: relative;
+		/*top: -130px;*/
+		z-index: 3;
+	}
+
+	.project-title{
+		font-family: 'Lato', sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	.project-blurb{
+		font-family: 'Playfair Display', serif;
+	}
+
+	.project-category{
+		font-family: 'Lato', sans-serif;
+	}
+
+	.portfolio-header{
+		text-align: center;
+	}
+
+	.portfolio-title{
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		font-size: 13.125em;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	.portfolio-category{
+		font-family: 'Playfair Display', serif;
+	}
+
+	.portfolio-blurb{
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		font-size: 4em;
+		line-height: -0.5em;
+	}
+
+	.portfolio-collaborators{
+		font-family: 'Playfair Display', serif;
+		line-height: 1.5em;
+
+	}
+
+	.portfolio-spiel{
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+	}
+
+	#title-info{
+		font-size: 2.5em;
+	}
+
+	.project-section{
+		margin: 5% 20%;
+		clear: both;
+	}
+
+	.project-section-title{
+		font-family: 'Lato', sans-serif;
+		font-weight: 900;
+	}
+
+	.project-section-content p{
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		line-height: 1.5em;
+	}
+
+	.project-section-content ul li{
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		line-height: 1.5;
+	}
+
+	.project-section-content a{
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		line-height: 1.5em;
+	}
+
+	.home-icon{
+		height: 30px;
+		width: 30px;
+		opacity: .4;
+		float: left;
+		top: 50px;
+		left: 30px;
+		position: fixed;
+	}
+	
+	.home-icon:hover{
+		opacity: 1;
+	}
+
+
+	.headline-name{
+		font-size: 2.5em;
+	}
+
+	.headline-title{
+		font-size: 1.5em;
+	}
+
+	.resume-container{
+		margin: auto 20%;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.resume-section{
+		font-family: 'Lato', sans-serif;
+	}
+
+@media screen and (max-device-width:480px){
+	body{
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-device-width:768px){
+	body{
+		font-size: 70%;
+	}
+}
+
+/* 400 and up */
+@media screen and (max-device-width:960px) { /* Place your styles here for all widths greater than 400px */ 
+	body{
+		font-size: 100%;
+	}
+}
+
+/* Retina Display */
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+
+					{ /* Place your styles here for all 'Retina' screens */ }
+
+}
