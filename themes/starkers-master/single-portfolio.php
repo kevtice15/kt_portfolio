@@ -26,7 +26,6 @@ $b = hexdec(substr($color, 5, 2));
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-
 <div class="body-container" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
 	<a class="home-icon" href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image(55); ?></a>
 	<hgroup class="portfolio-header">

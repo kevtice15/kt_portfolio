@@ -16,45 +16,74 @@ $resume_page_id = 31;
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-
 <div class="body-container">
-		<header>
-            <hgroup class="front-page-header">
-                <h1 class="headline-name">KeVon Ticer</h1>
-                <h2 class="headline-title"> Interaction Developer and Designer</h2>    
-                <nav>
-                    <ul class="navbar">
-                        <li><a href="<?php echo get_home_url(); ?>">Home</a></li>
-                        <li><a href="<?php echo get_permalink( $resume_page_id ); ?>">Resume</a></li>
-                        <li><a href="">About</a></li>
-                    </ul>
-                </nav>
-            </hgroup>
-		</header>
-		<ul>
-    		<?php
+    <div class="sidebar col-40">
+        <h1>KeVon Ticer</h1>
+        <h2>Front-end developer and prototyper</h2>
+        <h3>What I can do:</h3>
+        <ul class="skill-list">
+            <li>front-end prototyping, </li>
+            <li>web development, </li>
+            <li>responsive web design, </li>
+            <li>cross-platform mobile web dev, </li>
+            <li>user-centered research and evaluation, </li>
+            <li>contextual design, </li>
+            <li>interaction design, </li>
+            <li>usability testing, </li>
+            <li>storyboarding</li>
+        </ul>
+        <h3>Where I've worked:</h3>
+        <ul>
+            <li class="in-50"><a href="http://www.libertymutual.com"><img src="<?php echo wp_get_attachment_url(69); ?>"></a></li>
+            <li class="in-50"><a href="http://www.cisco.com"><img src="<?php echo wp_get_attachment_url(72); ?>"></a></li>
+        </ul>
+        <h3>Where I've studied:</h3>
+        <ul>
+            <li class="in-50"><a href="http://www.scs.howard.edu/"><img src="<?php echo wp_get_attachment_url(81); ?>"></a></li>
+            <li class="in-50"><a href="http://www.hcii.cmu.edu"><img src="<?php echo wp_get_attachment_url(70); ?>"></a></li>
+        </ul>
+        <h3>Contact Me!</h3>
+        <ul>
+            <li class="in-16"><a href="mailto:k.j.ticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>
+            <li class="in-16"><a href="http://www.github.com/kevtice15"><img src="<?php echo wp_get_attachment_url(77); ?>"></a></li>
+            <li class="in-16"><a href="http://www.linkedin.com/profile/view?id=61742293"><img src="<?php echo wp_get_attachment_url(79); ?>"></a></li>
+            <li class="in-16"><a href="http://www.plus.google.com/u/0/108593794409934626051/posts"><img src="<?php echo wp_get_attachment_url(78); ?>"></a></li>
+            <li class="in-16"><a href="http://www.facebook.com/kevonticer"><img src="<?php echo wp_get_attachment_url(76); ?>"></a></li>
+            <li class="in-16"><a href="http://www.twitter.com/CallMeKeV_"><img src="<?php echo wp_get_attachment_url(80); ?>"></a></li>
+        </ul>
+        <p>Made in 2013 by KeVon Ticer.</p>
+    </div>
+    <div class="col-row">
+        <ul class="skip-50">
+            <li class="col-33">
+                <a href="<?php echo get_permalink(31); ?>">Resume</a>
+            </li>
+            <li class="col-33">
+                <a href="<?php echo get_permalink(33); ?>">About Me</a>
+            </li>
+            <?php
                 $i = 0;
-    			$type = 'portfolio';
-    			$args = array(
-    				'post_type' => $type,
-    				'post_status' => 'publish',
-    				'posts_per_page' => -1,
-    				'caller_get_posts' => 1
-    			);
-    			$query = null;
-    			$query = new WP_Query($args);
-    			if($query->have_posts()){
-    				while($query->have_posts()) : $query->the_post(); ?>
-    				<?php
-                    $portfoliopost = get_post_custom(get_the_id());	
-    				// echo '<li><a href=' . get_permalink() . '><div class="order-outer"><div class="round"><img class="nnationpic">' . wp_get_attachment_image($portfoliopost[image][0]) . '</img></div><span>' . get_the_title() . '</span></div></a></li>';
-    				//print_r($portfoliopost);
-                    if(($i % 2) == 0){
-                        echo '<div class="col-row">';
-                    }
+                $type = 'portfolio';
+                $args = array(
+                    'post_type' => $type,
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                    'caller_get_posts' => 1
+                );
+                $query = null;
+                $query = new WP_Query($args);
+                if($query->have_posts()){
+                    while($query->have_posts()) : $query->the_post(); ?>
+                    <?php
+                    $portfoliopost = get_post_custom(get_the_id()); 
+                    // echo '<li><a href=' . get_permalink() . '><div class="order-outer"><div class="round"><img class="nnationpic">' . wp_get_attachment_image($portfoliopost[image][0]) . '</img></div><span>' . get_the_title() . '</span></div></a></li>';
+                    //print_r($portfoliopost);
+                    // if(($i % 2) == 0){
+                    //     echo '<div>';
+                    // }
                     echo'
-                        <li class="col-50">
-    						<div class="project-unit">
+                        <li class="col-33">
+                            <div class="project-unit">
                                 <a href=' . get_permalink() . '>
                                     <div class="project-marquee">
                                         ' . wp_get_attachment_image($portfoliopost[marquee_image][0], 'full') . '
@@ -65,21 +94,22 @@ $resume_page_id = 31;
                                     <p class="project-blurb">' . $portfoliopost[blurb][0] . '</p>
                                 </div>
                             </div>
-    					</li>';
-                    if(($i % 2) != 0){
-                        echo '</div>';
+                        </li>';
+                    // if(($i % 2) != 0){
+                    //     echo '</div>';
+                    // }
+                    // $i++;
+                    endwhile;
+                    // if(($i % 2) == 0){
+                    //     echo '</div>';
+                    // }
                     }
-                    $i++;
-    				endwhile;
-                    if(($i % 2) == 0){
-                        echo '</div>';
-                    }
-    				}
-    				wp_reset_query();
-    				wp_reset_postdata();
-    		?>
+                    wp_reset_query();
+                    wp_reset_postdata();
+            ?>
         </ul>
-	</div>
+    </div>
+</div>
 <!--	
 <?php if ( have_posts() ): ?>
  <h2>Latest Posts</h2>	
