@@ -15,12 +15,20 @@
 $resume_page_id = 31;
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<div class="body-container">
-    <div class="sidebar col-40">
-        <h1>KeVon Ticer</h1>
-        <h2>Front-end developer and prototyper</h2>
-        <h3>What I can do:</h3>
+<div class="navbar">
+    <nav>
+        <h1 class="myname">KeVon Ticer</h1>
+        <ul>
+            <li><a href="<?php echo get_permalink(31); ?>">Resume</a></li>
+            <li><a href="<?php echo get_permalink(33); ?>">About Me</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="body-container col-row">
+    <div class="sidebar">
+        <h2 class="mytitle">Hi, I'm KeVon.</h2>
+        <h2>I'm a front-end developer and prototyper. This is my website.</h2>
+        <h3 class="sidebar-header">What I do:</h3>
         <ul class="skill-list">
             <li>front-end prototyping, </li>
             <li>web development, </li>
@@ -32,35 +40,9 @@ $resume_page_id = 31;
             <li>usability testing, </li>
             <li>storyboarding</li>
         </ul>
-        <h3>Where I've worked:</h3>
-        <ul>
-            <li class="in-50"><a href="http://www.libertymutual.com"><img src="<?php echo wp_get_attachment_url(69); ?>"></a></li>
-            <li class="in-50"><a href="http://www.cisco.com"><img src="<?php echo wp_get_attachment_url(72); ?>"></a></li>
-        </ul>
-        <h3>Where I've studied:</h3>
-        <ul>
-            <li class="in-50"><a href="http://www.scs.howard.edu/"><img src="<?php echo wp_get_attachment_url(81); ?>"></a></li>
-            <li class="in-50"><a href="http://www.hcii.cmu.edu"><img src="<?php echo wp_get_attachment_url(70); ?>"></a></li>
-        </ul>
-        <h3>Contact Me!</h3>
-        <ul>
-            <li class="in-16"><a href="mailto:k.j.ticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>
-            <li class="in-16"><a href="http://www.github.com/kevtice15"><img src="<?php echo wp_get_attachment_url(77); ?>"></a></li>
-            <li class="in-16"><a href="http://www.linkedin.com/profile/view?id=61742293"><img src="<?php echo wp_get_attachment_url(79); ?>"></a></li>
-            <li class="in-16"><a href="http://www.plus.google.com/u/0/108593794409934626051/posts"><img src="<?php echo wp_get_attachment_url(78); ?>"></a></li>
-            <li class="in-16"><a href="http://www.facebook.com/kevonticer"><img src="<?php echo wp_get_attachment_url(76); ?>"></a></li>
-            <li class="in-16"><a href="http://www.twitter.com/CallMeKeV_"><img src="<?php echo wp_get_attachment_url(80); ?>"></a></li>
-        </ul>
-        <p>Made in 2013 by KeVon Ticer.</p>
     </div>
-    <div class="col-row">
-        <ul class="skip-50">
-            <li class="col-33">
-                <a href="<?php echo get_permalink(31); ?>">Resume</a>
-            </li>
-            <li class="col-33">
-                <a href="<?php echo get_permalink(33); ?>">About Me</a>
-            </li>
+    <div class="main-content">
+        <ul>
             <?php
                 $i = 0;
                 $type = 'portfolio';
@@ -82,18 +64,19 @@ $resume_page_id = 31;
                     //     echo '<div>';
                     // }
                     echo'
-                        <li class="col-33">
-                            <div class="project-unit">
-                                <a href=' . get_permalink() . '>
+                        <li class="col-25">
+                            <a href=' . get_permalink() . '>
+                                <div class="project-unit">
                                     <div class="project-marquee">
                                         ' . wp_get_attachment_image($portfoliopost[marquee_image][0], 'full') . '
                                     </div>
-                                </a>
-                                <div class="portfolio-text">
-                                    <p class="project-category">' . get_the_category_by_ID($portfoliopost[category][0]) . '</p>
-                                    <p class="project-blurb">' . $portfoliopost[blurb][0] . '</p>
+                                    <div class="portfolio-text">
+                                        <p class="project-name">' . $portfoliopost[name][0] . '</p>
+                                        <p class="project-category">' . get_the_category_by_ID($portfoliopost[category][0]) . '</p>
+                                        <p class="project-blurb">' . $portfoliopost[blurb][0] . '</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </li>';
                     // if(($i % 2) != 0){
                     //     echo '</div>';
@@ -108,6 +91,18 @@ $resume_page_id = 31;
                     wp_reset_postdata();
             ?>
         </ul>
+        <div class="mobile-contact">
+            <h3 class="sidebar-header">Contact Me!</h3>
+            <ul class="contact-list">
+                <li class="in-16"><a href="mailto:k.j.ticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>
+                <li class="in-16"><a href="http://www.github.com/kevtice15"><img src="<?php echo wp_get_attachment_url(77); ?>"></a></li>
+                <li class="in-16"><a href="http://www.linkedin.com/profile/view?id=61742293"><img src="<?php echo wp_get_attachment_url(79); ?>"></a></li>
+                <li class="in-16"><a href="http://www.plus.google.com/u/0/108593794409934626051/posts"><img src="<?php echo wp_get_attachment_url(78); ?>"></a></li>
+                <li class="in-16"><a href="http://www.facebook.com/kevonticer"><img src="<?php echo wp_get_attachment_url(76); ?>"></a></li>
+                <li class="in-16"><a href="http://www.twitter.com/CallMeKeV_"><img src="<?php echo wp_get_attachment_url(80); ?>"></a></li>
+            </ul>
+        </div>
+        <p class="mobile-cright">Made in 2013 by KeVon Ticer.</p>
     </div>
 </div>
 <!--	

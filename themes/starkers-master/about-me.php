@@ -1,9 +1,9 @@
 <?php
 /*
-Template Name: Resume
+Template Name: About Me
 */
-$resume_page_id = 31;
-$page_data = get_page(31);
+$about_page_id = 33;
+$page_data = get_page(33);
 $page_content = $page_data->post_content;
 ?>
 
@@ -20,7 +20,7 @@ $page_content = $page_data->post_content;
     </nav>
 </div>
 <div class="body-container">
-    <div class="resume-container">
+    <div class="about-me-container">
     	<?php echo $page_content ?>
     </div>
 </div>
