@@ -27,10 +27,10 @@ $b = hexdec(substr($color, 5, 2));
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <div class="navbar">
     <nav>
-            <h1 class="myname left">KeVon Ticer</h1>
+        <h1 class="myname"><a href="<?php echo home_url(); ?>">KeVon Ticer</a></h1>
         <ul>
         	<!-- <li><a class="home-icon" href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image(55); ?></a></li> -->
-            <li><a href="<?php echo home_url(); ?>">Home</a></li>
+            <li><a href="<?php echo home_url(); ?>">Portfolio</a></li>
             <li><a href="<?php echo get_permalink(31); ?>">Resume</a></li>
             <li><a href="<?php echo get_permalink(33); ?>">About Me</a></li>
         </ul>
@@ -44,7 +44,7 @@ $b = hexdec(substr($color, 5, 2));
 		<h3 class="portfolio-blurb"><?php echo $mypost[blurb][0]; ?></h3>
 	</hgroup>
 </div>
-<div class="body-container" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
+<div class="body-container mbp" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
 	<article>
 		<p class="portfolio-spiel"><?php echo get_the_content(); ?></p>
 		<div class="project-section">

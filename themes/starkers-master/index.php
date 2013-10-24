@@ -17,7 +17,7 @@ $resume_page_id = 31;
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="navbar">
     <nav>
-        <h1 class="myname">KeVon Ticer</h1>
+        <h1 class="myname"><a href="<?php echo home_url(); ?>">KeVon Ticer</a></h1>
         <ul>
             <li><a href="<?php echo get_permalink(31); ?>">Resume</a></li>
             <li><a href="<?php echo get_permalink(33); ?>">About Me</a></li>
@@ -42,7 +42,7 @@ $resume_page_id = 31;
         </ul>
     </div>
     <div class="main-content">
-        <ul>
+        <ul class="project-list">
             <?php
                 $i = 0;
                 $type = 'portfolio';
@@ -66,16 +66,15 @@ $resume_page_id = 31;
                     echo'
                         <li class="col-25">
                             <a href=' . get_permalink() . '>
-                                <div class="project-unit">
-                                    <div class="project-marquee">
-                                        ' . wp_get_attachment_image($portfoliopost[marquee_image][0], 'full') . '
-                                    </div>
-                                    <div class="portfolio-text">
-                                        <p class="project-name">' . $portfoliopost[name][0] . '</p>
-                                        <p class="project-category">' . get_the_category_by_ID($portfoliopost[category][0]) . '</p>
-                                        <p class="project-blurb">' . $portfoliopost[blurb][0] . '</p>
-                                    </div>
+                                <div class="project-marquee">
+                                    ' . wp_get_attachment_image($portfoliopost[frontpage_image][0], 'full') . '
                                 </div>
+                                <div class="portfolio-text">
+                                    <p class="project-name">' . $portfoliopost[name][0] . '</p>
+                                    <p class="project-blurb">' . $portfoliopost[blurb][0] . '</p>' .
+                                    //<hr />
+                                    //<p class="project-category">' . get_the_category_by_ID($portfoliopost[category][0]) . '</p>
+                                '</div>
                             </a>
                         </li>';
                     // if(($i % 2) != 0){
