@@ -44,52 +44,51 @@ $b = hexdec(substr($color, 5, 2));
 		<h3 class="portfolio-blurb"><?php echo $mypost[blurb][0]; ?></h3>
 	</hgroup>
 </div>
-<div class="body-container mbp" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
-	<article>
-		<p class="portfolio-spiel"><?php echo get_the_content(); ?></p>
-		<div class="project-section">
-			<div class="col-row">
-				<div class="col-40 left">
-					<div class="project-section-title">
-						<p>PROMPT</p>
-					</div>
-					<div class="project-section-content">
-						<p><?php echo get_field('prompt'); ?></p>
-					</div>
-					<div class="project-section-title">
-						<p>DURATION</p>
-					</div>
-					<div class="project-section-content">
-						<p><?php echo get_field('duration'); ?></p>
-					</div>
-					<div class="project-section-title">
-						<p>COLLABORATORS</p>
-					</div>
-					<div class="project-section-content">
-						<p><?php echo get_field('group_members'); ?></p>
-					</div>
+<div class="body-container-portfolio" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
+	<p class="portfolio-spiel"><?php echo get_the_content(); ?></p>
+	<div class="project-section">
+		<div class="col-row">
+			<div class="col-40 left">
+				<div class="project-section-title">
+					<p>PROMPT</p>
 				</div>
-				<div class="col-80">
-					<div class="project-section-title">
-						<p>PRODUCT</p>
-					</div>
-					<div class="project-section-content">
-						<p><?php echo get_field('product'); ?></p>
-					</div>
-					<div class="project-section-title">
-						<p>PROCESS</p>
-					</div>
-					<div class="project-section-content">
-						<p><?php echo get_field('process'); ?></p>
-					</div>
+				<div class="project-section-content">
+					<p><?php echo get_field('prompt'); ?></p>
+				</div>
+				<div class="project-section-title">
+					<p>DURATION</p>
+				</div>
+				<div class="project-section-content">
+					<p><?php echo get_field('duration'); ?></p>
+				</div>
+				<div class="project-section-title">
+					<p>COLLABORATORS</p>
+				</div>
+				<div class="project-section-content collabs">
+					<p><?php echo get_field('group_members'); ?></p>
+				</div>
+			</div>
+			<div class="col-80">
+				<div class="project-section-title">
+					<p>PRODUCT</p>
+				</div>
+				<div class="project-section-content">
+					<p><?php echo get_field('product'); ?></p>
+				</div>
+				<div class="project-section-title">
+					<p>PROCESS</p>
+				</div>
+				<div class="project-section-content">
+					<p><?php echo get_field('process'); ?></p>
 				</div>
 			</div>
 		</div>
-		<div style="clear: both;"></div>
-		
-	</article>
+	</div>
+	<div style="clear: both;"></div>
 <?php endwhile; ?>
-
+</div>
+<div class="footer">
+	<p>&copy KeVon Ticer 2013</p>
 </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

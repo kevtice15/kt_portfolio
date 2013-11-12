@@ -42,6 +42,7 @@ $resume_page_id = 31;
         </ul>
     </div>
     <div class="main-content">
+        <h3 class="sidebar-header">Things I've Done:</h3>
         <ul class="project-list">
             <?php
                 $i = 0;

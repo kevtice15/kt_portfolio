@@ -24,4 +24,7 @@ $page_content = $page_data->post_content;
     	<?php echo $page_content ?>
     </div>
 </div>
+<div class="footer">
+    <p>&copy KeVon Ticer 2013</p>
+</div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

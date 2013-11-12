@@ -71,6 +71,9 @@ PHONE PORTRAIT
 
 /*****************  Mobile Home Page  *******************/
 
+img#wpstats{display:none}
+
+
 body{
 	background-color: #FFF;
 	font-size: 70%;
@@ -136,7 +139,7 @@ a{
 
 .navbar nav ul li{
 	float: left;
-	margin-left: 20px;
+	margin-left: 10px;
 	font-size: 1.25em;
 	vertical-align: top;
 
@@ -147,11 +150,11 @@ a{
 }
 
 .body-container{
-	padding: 20px;
+	padding: 10px;
 	position: relative;
 	z-index: 1;
 	padding-top: 60px;
-	max-width: 500px;
+	max-width: 410px;
 	margin: 0 auto;
 }
 
@@ -213,7 +216,7 @@ a{
 
 .col-25{
 	margin: 0 auto;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 	max-width: 400px;
 }
 
@@ -225,9 +228,9 @@ a{
 
 .portfolio-text{
 	position: absolute;
-	bottom: 35%;
+	bottom: 5%;
+	left: 5%;
 	z-index: 2;
-	text-align: center;
 	width: 100%;
 }
 
@@ -237,37 +240,39 @@ a{
 
 .project-name{
 	font-weight: 700;
-	font-size: 2em;
+	font-size: 1.25em;
 }
 /*****************  Mobile Single Portfolio  *******************/
 
 .portfolio-header{
-	z-index: 1;
-	position: absolute;
-	bottom: 35%;
 	z-index: 1;
 	text-align: center;
 	width: 100%;
 }
 
 .portfolio-title{
-	color: #FFFFFF;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 3em;
 }
 
 .portfolio-blurb{
-	color: #FFFFFF;
 	font-size: 1.5em;
 }
 
 .portfolio-marquee{
-	position: relative;
+	padding: 10px;
 	padding-top: 50px;
-	float: 	left;
 	z-index: 2;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
 }
+
+/*.portfolio-marquee img{
+	position: absolute;
+	clip: rect(0px, 1024px, 600px, 0px);
+}*/
 
 .project-section-title{
 	font-size: 2em;
@@ -302,8 +307,71 @@ a{
 	width: 100%;
 	display: inline-block;
 }
+
+.body-container-portfolio{
+	padding: 10px;
+	padding-top: 15px;
+}
+
+.project-section-content ul{
+	padding: 10px;
+}
+.project-section-content ul li{
+	padding: 5px;
+	font-size: 1em;
+}
+
+.project-section-content strong {
+display: block;
+margin-top: 40px;
+}
+
+.collabs ul{
+	padding: 0;
+}
+
+.collabs ul li{
+	padding: 0;
+	font-size: 1.125em;
+	line-height: 1.5em;
+}
+
+.footer{
+	padding: 20px;
+	background-color: #000000;
+}
+
+.footer p{
+	text-align: center;
+	color: #AAA;
+}
+
+/* Fix for responsive vimeo players */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /*****************  Mobile Resume  *******************/
 
+/*****************  Mobile About Me  *******************/
+
+.aboutmemarquee{
+	width: 100%;
+}
+
+#aboutmeimg {
+}
 
 /*********************************
 PHONE LANDSCAPE
@@ -355,10 +423,10 @@ TABLET PORTRAIT
 	}
 	
 	.body-container{
-		padding-top: 110px;
+		padding-top: 100px;
 		padding-left: 10px;
 		padding-right: 10px;
-		max-width: 100%;
+		max-width: 860px;
 	}
 
 	.sidebar{
@@ -421,7 +489,7 @@ TABLET PORTRAIT
 	}
 
 	.portfolio-marquee{
-		padding-top: 95px;
+		padding-top: 120px;
 	}
 }
 
@@ -429,7 +497,7 @@ TABLET PORTRAIT
 DESKTOP
 *********************************/
 
-@media screen and (min-width:769px){
+@media screen and (min-width:1134px){
 	body{
 		font: normal 100% 'Titillium Web', sans-serif;
 	}
@@ -471,7 +539,12 @@ DESKTOP
 		padding: 40px;
 		padding-top: 120px;
 		background-color: #FFF;
-		}	
+	}	
+
+	.body-container-portfolio{
+		padding: 10px;
+		padding-top: 30px;
+	}
 
 	.navbar li{
 		display: inline-block;
@@ -547,7 +620,7 @@ DESKTOP
 
 
 	.col-25{
-		width: 32%;
+		width: 33%;
 		display:inline-block;
 	}
 
@@ -560,14 +633,6 @@ DESKTOP
 		display: inline-block;
 		margin-right: 1%;
 	}
-	
-
-	.mbp{
-		z-index: 2;
-		position: relative;
-		top: -200px;
-	}
-
 
 	.skip-50{
 		margin-left: 41.5%;
@@ -628,7 +693,6 @@ DESKTOP
 	}
 
 	.portfolio-text{
-		text-align: center;
 		z-index: 3;
 	}
 
@@ -651,32 +715,27 @@ DESKTOP
 	}
 
 	.portfolio-title{
-		font-family: 'Lato', sans-serif;
-		font-weight: 100;
-		font-size: 13.125em;
+		font-weight: 700;
+		font-size: 3.125em;
 		text-transform: uppercase;
 		width: 100%;
 	}
 
 	.portfolio-category{
-		font-family: 'Playfair Display', serif;
 	}
 
 	.portfolio-blurb{
-		font-family: 'Lato', sans-serif;
 		font-weight: 100;
-		font-size: 4em;
+		font-size: 2em;
 		line-height: -0.5em;
 	}
 
 	.portfolio-collaborators{
-		font-family: 'Playfair Display', serif;
 		line-height: 1.5em;
 
 	}
 
 	.portfolio-spiel{
-		font-family: 'Lato', sans-serif;
 		font-weight: 100;
 	}
 
@@ -686,17 +745,11 @@ DESKTOP
 
 	.project-section{
 		margin: 0 auto;
-		max-width: 1200px;
-		position: relative;
-		top: -95px;
+		max-width: 1024px;
 		clear: both;
-		padding: 50px;
-		background-color: #FFF;
-		background: linear-gradient(to bottom, rgba(255,255,255,1) 25%, rgba(255,0,0,0));
 	}
 
 	.project-section-title{
-		font-family: 'Lato', sans-serif;
 		font-weight: 900;
 		margin-bottom: 10px;
 		font-size: 1em;
@@ -707,19 +760,16 @@ DESKTOP
 	}
 
 	.project-section-content p{
-		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 		line-height: 1.5em;
 	}
 
 	.project-section-content ul li{
-		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 		line-height: 1.5;
 	}
 
 	.project-section-content a{
-		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 		line-height: 1.5em;
 	}
@@ -748,7 +798,7 @@ DESKTOP
 	}
 
 	.resume-container{
-		margin: auto 20%;
+		margin: auto 0;
 		font-family: 'Lato', sans-serif;
 	}
 
@@ -815,9 +865,6 @@ DESKTOP
 		margin-top: -25px;
 	}	
 
-	.portfolio-marquee{
-		padding-top: 0;
-	}
 
 }
 /* 400 and up */
