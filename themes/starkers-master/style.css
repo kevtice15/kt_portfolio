@@ -104,16 +104,17 @@ h4{
 
 li,
 p{
-	font-size: 1.125em; /* 18px / 16px = 1.125em */
+	font-size: 1.25em; /* 18px / 16px = 1.125em */
 	font-family:'Titillium Web', sans-serif;
 	font-weight: 300;
 	color: #585858;
 }
 	
 a{
-	text-decoration: none;
+	text-decoration: underline;
 	font-family: 'Titillium Web', sans-serif;
 	color: #585858;
+
 }
 
 .myname{
@@ -147,6 +148,10 @@ a{
 
 .navbar nav{
 	padding: 10px 20px;
+}
+
+.navbar a{
+	text-decoration: none;
 }
 
 .body-container{
@@ -287,6 +292,9 @@ a{
 	display: none;
 }
 
+.project-section-content p{
+	margin-top: 15px;
+}
 
 .contact-list{
 	/* Regulate the size of the contact squares */
@@ -294,6 +302,8 @@ a{
 
 .mobile-contact{
 	text-align: justify;
+	text-align: center;
+	margin-top: 20px;
 }
 
 .mobile-contact ul li{
@@ -338,6 +348,7 @@ margin-top: 40px;
 
 .footer{
 	padding: 20px;
+	width: 100%;
 	background-color: #000000;
 }
 
@@ -363,6 +374,25 @@ margin-top: 40px;
     height: 100%;
 }
 /*****************  Mobile Resume  *******************/
+.resume-button{
+	text-decoration: none;
+	background-color: #31a9d2;
+	padding: 13px;
+	color: #ffffff;
+	border-radius: 5px;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.25em;
+	font-family: Titillium Web;
+	margin: 20px 0;
+}
+
+.resume-button:hover{
+	background-color: #137394;
+	color: #ffffff;
+}
 
 /*****************  Mobile About Me  *******************/
 
@@ -370,7 +400,8 @@ margin-top: 40px;
 	width: 100%;
 }
 
-#aboutmeimg {
+.about-me-container p{
+	margin-top: 25px;
 }
 
 /*********************************
@@ -491,6 +522,15 @@ TABLET PORTRAIT
 	.portfolio-marquee{
 		padding-top: 120px;
 	}
+
+	.desktop{
+		display: none;
+	}
+	
+	.project-section{
+		max-width: 600px;
+		margin: 0 auto;
+	}
 }
 
 /*********************************
@@ -529,7 +569,6 @@ DESKTOP
 	}
 	
 	a{
-		text-decoration: none;
 		font-family: 'Titillium Web', sans-serif;
 	}
 
@@ -549,7 +588,6 @@ DESKTOP
 	.navbar li{
 		display: inline-block;
 		padding: 30px;
-		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 	}	
 
