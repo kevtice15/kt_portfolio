@@ -404,6 +404,144 @@ margin-top: 40px;
 	margin-top: 25px;
 }
 
+/*****************  Mobile Blog Category  *******************/
+.blog-title a{
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.75em;
+}
+
+.comment-link a{
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+}
+
+.post-list li{
+	margin-bottom: 40px;
+}
+
+.title-of-blog{
+	font-size: 4em;
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 50px;
+}
+
+.blog-navbar{
+	border-top: 0;
+}
+
+.blog-navbar a{
+	font-family: 'Roboto', sans-serif;
+	font-size: .5em;
+	font-weight: 100;
+}
+
+.back-to-port{
+	font-size: 3em;
+}
+
+.blog-footer{
+	background-color: #FFFFFF;
+}
+
+/*****************  Mobile Blog Post  *******************/
+.blog-title{
+	font-weight: 100;
+	font-size: 4em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.blog-date{
+	font-family: 'Roboto', sans-serif;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.blog-content{
+	margin-top: 20px;
+}
+
+.blog-content p{
+	font-family: 'Roboto', sans-serif;
+}
+
+#comments{
+	margin-top: 80px;
+}
+
+#comments h2{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+#comments ol li article{
+	margin-bottom: 60px;
+}
+
+#comments ol li article img{
+
+}
+
+#comments ol li article h4{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+#comments ol li article time a{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+#comments ol li article p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+#respond h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;	
+}
+
+.logged-in-as{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.logged-in-as a{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.comment-form-comment{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.form-allowed-tags{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.form-submit{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.comment-subscription-form{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.blog-content p strong{
+	display: inline-block;
+	margin-top: 50px;
+}
+
+.blog-content p a{
+	display: inline-block;
+	margin: 50px 0;
+}
 /*********************************
 PHONE LANDSCAPE
 *********************************/

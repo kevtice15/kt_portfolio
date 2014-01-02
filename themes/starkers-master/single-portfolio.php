@@ -30,6 +30,7 @@ $b = hexdec(substr($color, 5, 2));
         <h1 class="myname"><a href="<?php echo home_url(); ?>">KeVon Ticer</a></h1>
         <ul>
         	<!-- <li><a class="home-icon" href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image(55); ?></a></li> -->
+            <li><a href="<?php echo get_category_link( get_cat_id('blog') ); ?> ">Blog</a></li>
             <li><a href="<?php echo home_url(); ?>">Portfolio</a></li>
             <li><a href="<?php echo get_permalink(31); ?>">Resume</a></li>
             <li><a href="<?php echo get_permalink(33); ?>">About Me</a></li>

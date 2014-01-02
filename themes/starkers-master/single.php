@@ -12,20 +12,29 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+<div class="navbar blog-navbar">
+  <nav>
+    <h1 class="back-to-port">
+    	<a href="<?php echo home_url(); ?>">&larr; Portfolio</a>
+    	<a href="<?php echo get_category_link( get_cat_id('blog') ); ?> "> / All Posts</a>
+    </h1>
+  </nav>
+</div>
 <article>
-
-	<h2><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>			
-
-	<?php if ( get_the_author_meta( 'description' ) ) : ?>
-	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-	<h3>About <?php echo get_the_author() ; ?></h3>
-	<?php the_author_meta( 'description' ); ?>
-	<?php endif; ?>
-
-	<?php comments_template( '', true ); ?>
+	<div class="body-container">
+		<h2 class="blog-title"><?php the_title(); ?></h2>
+		<time class="blog-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
+		<div class="blog-content">
+			<?php the_content(); ?>			
+		</div>
+		<?php if ( get_the_author_meta( 'description' ) ) : ?>
+		<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+		<h3>About <?php echo get_the_author() ; ?></h3>
+		<?php the_author_meta( 'description' ); ?>
+		<?php endif; ?>
+		<?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+		<?php comments_template( '', true ); ?>
+	</div>
 
 </article>
 <?php endwhile; ?>

@@ -19,6 +19,7 @@ $resume_page_id = 31;
     <nav>
         <h1 class="myname"><a href="<?php echo home_url(); ?>">KeVon Ticer</a></h1>
         <ul>
+            <li><a href="<?php echo get_category_link( get_cat_id('blog') ); ?> ">Blog</a></li>
             <li><a href="<?php echo get_permalink(31); ?>">Resume</a></li>
             <li><a href="<?php echo get_permalink(33); ?>">About Me</a></li>
         </ul>

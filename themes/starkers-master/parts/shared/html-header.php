@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/foundation/css/normalize.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/foundation/css/foundation.min.css">
     	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,700' rel='stylesheet' type='text/css'>
     	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/foundation/js/vendor/jquery.js"></script>
