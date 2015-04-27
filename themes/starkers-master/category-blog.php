@@ -18,7 +18,7 @@
   </nav>
 </div>
 <?php if ( have_posts() ): ?>
-<div class="body-container">
+<div class="body-container blog-holder">
 <h2 class="title-of-blog">KeVon's Blog</h2>
 <ol class="post-list">
 <?php while ( have_posts() ) : the_post(); ?>
@@ -38,7 +38,7 @@
 <?php endif; ?>
 </div>
 <div class="footer blog-footer">
-	<p>&copy KeVon Ticer 2013</p>
+	<p>&copy; KeVon Ticer 2013</p>
 	<div class="mobile-contact">
     <ul class="contact-list">
       <li class="in-16"><a href="mailto:k.j.ticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>

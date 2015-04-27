@@ -28,7 +28,7 @@ $resume_page_id = 31;
 <div class="body-container col-row">
     <div class="sidebar">
         <h2 class="mytitle">Hi, I'm KeVon.</h2>
-        <h2>I'm a front-end developer and prototyper. This is my website.</h2>
+        <h2>I'm an interaction designer based in San Francisco. This is my website.</h2>
         <h3 class="sidebar-header">What I do:</h3>
         <ul class="skill-list">
             <li>front-end prototyping, </li>
@@ -95,7 +95,7 @@ $resume_page_id = 31;
     </div>
 </div>
 <div class="footer">
-    <p>&copy KeVon Ticer 2013</p>
+    <p>&copy; KeVon Ticer 2013</p>
     <div class="mobile-contact">
         <ul class="contact-list">
             <li class="in-16"><a href="mailto:k.j.ticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>

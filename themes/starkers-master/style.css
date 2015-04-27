@@ -111,10 +111,19 @@ p{
 }
 	
 a{
-	text-decoration: underline;
+	text-decoration: none;
 	font-family: 'Titillium Web', sans-serif;
-	color: #585858;
+	color: #31a9d2;
 
+}
+
+a:visited {
+	color: #6a4c96;
+}
+
+blockquote{
+	margin: 27px 0px;
+	margin-left: 30px;
 }
 
 .myname{
@@ -308,8 +317,8 @@ a{
 
 .mobile-contact ul li{
 	display: inline-block;
-	height: 45px;
-	width: 45px;
+	height: 44px;
+	width: 44px;
 }
 
 .mobile-contact::after{
@@ -334,6 +343,11 @@ a{
 .project-section-content strong {
 display: block;
 margin-top: 40px;
+}
+
+.project-section-content div{
+	width: 100% !important;
+	margin: 50px 0;
 }
 
 .collabs ul{
@@ -406,9 +420,9 @@ margin-top: 40px;
 
 /*****************  Mobile Blog Category  *******************/
 .blog-title a{
-	font-weight: 100;
+	font-weight: 300;
 	font-family: 'Roboto', sans-serif;
-	font-size: 0.75em;
+	font-size: 0.4em;
 }
 
 .comment-link a{
@@ -447,9 +461,10 @@ margin-top: 40px;
 
 /*****************  Mobile Blog Post  *******************/
 .blog-title{
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 4em;
 	font-family: 'Roboto', sans-serif;
+	line-height: 1;
 }
 
 .blog-date{
@@ -460,15 +475,19 @@ margin-top: 40px;
 
 .blog-content{
 	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.wp-caption-text{
+	margin: 0 !important;
+	font-size: .8em;
 }
 
 .blog-content p{
 	font-family: 'Roboto', sans-serif;
+	margin: 50px 0;
 }
 
-#comments{
-	margin-top: 80px;
-}
 
 #comments h2{
 	font-family: 'Roboto', sans-serif;
@@ -540,8 +559,14 @@ margin-top: 40px;
 
 .blog-content p a{
 	display: inline-block;
+}
+
+.blog-content div{
+	width: 100% !important;
 	margin: 50px 0;
 }
+
+
 /*********************************
 PHONE LANDSCAPE
 *********************************/
@@ -596,6 +621,10 @@ TABLET PORTRAIT
 		padding-left: 10px;
 		padding-right: 10px;
 		max-width: 860px;
+	}
+	
+	.blog-holder{
+		max-width: 650px;
 	}
 
 	.sidebar{
@@ -701,7 +730,7 @@ DESKTOP
 
 	li,
 	p{
-		font-size: 1.125em; /* 18px / 16px = 1.125em */
+		font-size: 1.05em; /* 18px / 16px = 1.125em */
 		font-family:'Titillium Web', sans-serif;
 		font-weight: 300;
 	}

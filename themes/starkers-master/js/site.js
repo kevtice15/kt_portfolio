@@ -6,14 +6,36 @@ jQuery(document).ready(function($) {
 		console.log("ME");
 	});
 
-	var scrollHandler = function(){
-		console.log("scroll event detected! " + window.pageXOffset + " " + window.pageYOffset);
-		if(window.pageYOffset > 135){
-			console.log($('.navbar'));
-		}
-	};
 
-	window.onscroll = scrollHandler;
+	function scrollingUp(){
+
+	}
+
+	function scrollingDown(){
+
+	}
+
+	var lastScrollTop = 0;
+
+	// var scrollHandler = function(){
+	// 		var st = $(window).scrollTop();
+	// 		if (st > lastScrollTop){
+	// 			console.log("lst: ", lastScrollTop);
+	// 			console.log("st: ", st);
+	// 			console.log("slide up activated");
+	// 			$('.navbar').slideUp(700);
+	// 		}
+	// 		else {
+	// 			console.log("lst: ", lastScrollTop);
+	// 			console.log("st: ", st);
+	// 			console.log("slide down activated");
+	// 			$('.navbar').slideDown(700);
+	// 		}
+	// 	lastScrollTop = st;
+	// 	console.log("scroll event detected! " + window.pageXOffset + " " + window.pageYOffset);
+	// };
+
+	// window.onscroll = scrollHandler;
 
 
 });
