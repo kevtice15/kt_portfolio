@@ -89,7 +89,7 @@ $b = hexdec(substr($color, 5, 2));
 <?php endwhile; ?>
 </div>
 <div class="footer">
-	<p>&copy; KeVon Ticer 2013</p>
+	<p>&copy; KeVon Ticer 2015</p>
 	<div class="mobile-contact">
         <ul class="contact-list">
             <li class="in-16"><a href="mailto:kevonticer@gmail.com"><img src="<?php echo wp_get_attachment_url(75); ?>"></a></li>

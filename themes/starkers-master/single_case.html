@@ -12,47 +12,62 @@
 </section>
 <figure class="cs-img-section">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/201411316_111196-CapturFiles.png"><img class="aligncenter size-full wp-image-281" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/201411316_111196-CapturFiles.png" alt="201411316_111196-CapturFiles" width="2466" height="1476" /></a>
+	<figcaption>A release of µTorrent Pro streaming BitTorrent's <a href="https://bundles.bittorrent.com/bundles/tomorrowsmodernboxes">Thom Yorke Bundle</a>.</figcaption>
 </figure>
 
 <section class="cs-text-section">
-	<p class="p1">Here is a case study of designing the part of the system that shows users which files they can play.</p>
+	<p class="p1">This post is a case study of designing the part of the system that shows users which files they can play.</p>
 </section>
 
 <hr class="behind-line" />
 
 <section class="cs-text-section">
 	<div class="in-front">
-		<h1 class="cs-section-title">File State System Iterations</h1>	
+		<h1 class="cs-section-title centered">File-State System Iterations</h1>	
 	</div>
 	<p class="p1">I worked with the engineers on my team to understand the technology behind Streaming and figure out how we can surface it to people in a useful way. When a user adds a torrent to µTorrent, it analyzes all the files in the torrent over and over to determine if they can be streamed. It analyzes repeatedly because Streaming depends heavily on a lot of variable factors like internet connection speed and the health of the torrent. From these initial work sessions, we established that files transition through 4 states:</p>
-	<ul>
-		<li>Analyzing: µTorrent is determining if it can stream the file</li>
-		<li>Previewable*: There is enough of the file downloaded to play about a 15 second clip</li>
-		<li>Streamable: We are confident the file can play uninterrupted</li>
-		<li>Downloaded: The file will play uninterrupted because it’s fully downloaded</li>
-		<li>We also had an unplayable state if µTorrent doesn’t support the file type.</li>
-	</ul>
+	<div class="cs-dlist-container">
+		<dl>
+			<dt>Analyzing:</dt>
+			<dd>µTorrent is determining if it can stream the file</dd>
+
+			<dt>* Previewable:</dt>
+			<dd>There is enough of the file downloaded to play about a 15 second clip</dd>
+
+			<dt>Streamable:</dt>
+			<dd>We are confident the file can play uninterrupted</dd>
+
+			<dt>Downloaded:</dt>
+			<dd>The file will play uninterrupted because it’s fully downloaded</dd>
+
+			<dt>(Unplayable):</dt>
+			<dd>We also had an unplayable state if µTorrent doesn’t support the file type</dd>
+		</dl>
+	</div>
+
 </section>
 
-<section class="cs-text-section">
-	<p class="p1">* We made previewing a separate feature because a large portion of our international users live in countries where ISPs charge for service by the byte instead of a flat monthly fee. This feature would allow them to evaluate a file before they literally invest money in downloading the entire thing.</p>
+<section class="cs-text-section footnote">
+	<p class="p1">* We made previewing a separate feature because a large portion of our international users live in countries where ISPs charge for service by the byte instead of a flat monthly fee. Streaming would allow them to evaluate a file before they literally invest money in downloading the entire thing.</p>
 </section>
 
 <figure class="cs-img-section">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/V2-2.png"><img class="aligncenter size-full wp-image-282" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/V2-2.png" alt="V2 2" width="1004" height="890" /></a>
+	<figcaption>An early diagram I created and presented to my team and stakeholders to get on the same page about how Streaming states should work.</figcaption>
 </figure>
 
 <section class="cs-quote-section">
-	<p class="p1"><i>The challenge became figuring out how to represent these states to users in an intuitive way.</i></p>
+	<p class="p1">The challenge became figuring out how to represent these states to users in an intuitive way.</p>
 </section>
 
 <section class="cs-text-section">
-	<h2 class="cs-subheader">Iteration 1: Analyze -&gt; Preview -&gt; Stream -&gt; Downloaded</h2>
+	<h2 class="cs-subheader">Iteration 1: Analyze <i class="fa fa-chevron-right"></i> Preview <i class="fa fa-chevron-right"></i> Stream <i class="fa fa-chevron-right"></i> Downloaded</h2>
 	<p class="p1">In the first design for this system, I gave each state an indicator in the UI. Analyzing files would have a spinner,<span class="Apple-converted-space">  </span>unplayable files would have a red icon, previewable files would have a yellow icon, and both streamable and downloaded files would have a green icon. We thought a “stop light colors” metaphor would be easy for users to understand and help them make decisions.</p>
 </section>
 
 <figure class="cs-img-section">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/status_6_crop.png"><img class="aligncenter size-full wp-image-284" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/status_6_crop.png" alt="status_6_crop" width="1281" height="819" /></a>
+	<figcaption>The first wireframes I made for Streaming relied on a "traffic light" metaphor.</figcaption>
 </figure>
 
 <section class="cs-text-section">
@@ -65,7 +80,7 @@
 </section>
 
 <section class="cs-text-section">
-	<h2 class="cs-subheader">Iteration 2: Analyze -&gt; Stream -&gt; Downloaded</h2>
+	<h2 class="cs-subheader">Iteration 2: Analyze <i class="fa fa-chevron-right"></i> Stream <i class="fa fa-chevron-right"></i> Downloaded</h2>
 	<p class="p1">At this point, we conducted a few user tests. I wanted to understand more about how users naturally perceived the different states given their typical experiences with streaming products like Netflix or Hulu. We showed users a few paper prototypes with the icons we were thinking about using to indicate the file states.</p>
 </section>
 
@@ -75,8 +90,9 @@
 	<p class="p1">Another issue that came up with the analyzing state in a design review was that in edge cases where the user adds a torrent with a really large number of files (50+), the screen could become overwhelming with too many spinners. Our PM was really concerned about this edge case.</p>
 </section>
 
-<figure class="cs-img-section">
+<figure class="cs-img-section side-cap">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/status_2_crop.png"><img class="aligncenter size-full wp-image-283" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/status_2_crop.png" alt="status_2_crop" width="1281" height="819" /></a>
+	<figcaption class="side-caption big">I wanted to use spinners to show that the files were being analyzed. Later we figured a better approach would be to remove the spinners and let users click the file they want and give feedback in the player viewer.</figcaption>
 </figure>
 
 <section class="cs-text-section">
@@ -88,15 +104,17 @@
 
 <figure class="cs-img-section">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/201411311_131198-CapturFiles_crop.png"><img class="aligncenter size-full wp-image-287" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/201411311_131198-CapturFiles_crop.png" alt="201411311_131198-CapturFiles_crop" width="1821" height="929" /></a>
+	<figcaption>Through user testing, we discovered that the "traffic light" metaphor wasn't working as well as we wanted.</figcaption>
 </figure>
 
 <section class="cs-text-section">
-	<h2 class="cs-subheader">Iteration 3: Not Yet -&gt; 80% Sure -&gt; Definitely:</h2>
+	<h2 class="cs-subheader">Iteration 3: Not Yet <i class="fa fa-chevron-right"></i> 80% Sure <i class="fa fa-chevron-right"></i> Definitely:</h2>
 	<p class="p1">At this point, we had a working build of Streaming we could test with on our computers. We added in messages as feedback when users clicked on analyzing files. I decided that the video player area was a good place to message the user when they clicked on them because that area of the screen would have their attention. One of the technical limitations of the feature is that it is not possible to determine how long it will take for a file to start streaming. However, we were able to optimize the technology to make the wait shorter. In this iteration of Streaming, when the user clicks on an analyzing file to try and play it, that file receives download priority and should become streamable more quickly than usual.</p>
 </section>
 
 <figure class="cs-img-section">
 	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/uTorrent_icons.png"><img class="aligncenter size-full wp-image-286" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/uTorrent_icons.png" alt="uTorrent_icons" width="1200" height="640" /></a>
+	<figcaption>We changed our states to reflect the mental model we saw in users. A hollow icon to mean "not yet", a green icon to mean "will stream", a black icon to mean "definitely will play", and a grey row to mean "unplayable."</figcaption>
 </figure>
 
 <section class="cs-text-section">
@@ -104,8 +122,9 @@
 	<h3 class="cs-h3">Fixes:</h3><p class="p1">To help users understand that a file was still downloading while it is playing, we also showed the pieces of files that were already downloaded in real time on the video player’s timeline, similar to YouTube. This helped a lot with users understanding that files were still downloading and missing pieces. We had written stories in our backlog to remove the extra play button icon. The plan was to take on those stories once we optimized Streaming to be at least 90% reliable.</p>
 </section>
 
-<figure class="cs-img-section">
-	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/FINAL_Player-UI-2.png"><img class="aligncenter size-full wp-image-285" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/FINAL_Player-UI-2.png" alt="FINAL_Player UI 2" width="502" height="305" /></a>
+<figure class="cs-img-section side-cap">
+	<a href="http://kevonticer.com/wp/wp-content/uploads/2015/06/FINAL_Player-UI-2_crop.png"><img class="aligncenter size-full wp-image-285" src="http://kevonticer.com/wp/wp-content/uploads/2015/06/FINAL_Player-UI-2_crop.png" alt="FINAL_Player UI 2" width="502" height="305" /></a>
+	<figcaption class="side-caption">I wanted to phase out either the green or black play icon to make the feature more straight forward. One of the steps towards doing this was showing the downloaded pieces of files in the player, which shows users the file is still downloading.</figcaption>
 </figure>
 
 <section class="cs-text-section">

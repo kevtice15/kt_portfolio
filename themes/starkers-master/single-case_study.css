@@ -25,13 +25,19 @@ h4{
 	color: #585858;
 }
 
-li,
+li{
+	font-size: 1.1em; /* 18px / 16px = 1.125em */
+	font-family:'Muli', sans-serif;
+	font-weight: 300;
+	color: #585858;
+	line-height: 2.1em;
+}
 p{
 	font-size: 1.1em; /* 18px / 16px = 1.125em */
 	font-family:'Muli', sans-serif;
 	font-weight: 300;
 	color: #585858;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	line-height: 2.1em;
 }
 	
@@ -41,23 +47,79 @@ a{
 	color: #31a9d2;
 }
 
+dt{
+	font-family: 'Muli', sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+dd{
+	font-family: 'Muli', sans-serif;
+	font-size: .95em;
+}
+
 section,
 figure{
 	margin: 0 auto;
+}
+
+figure{
+	margin-bottom: 40px;
+}
+
+figcaption{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-family: 'Muli', sans-serif;
+	font-size: .9em;
+}
+
+.myname a,
+nav ul li a{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.footer p{
+	font-family: 'Titillium Web', sans-serif;
+	padding-bottom: 0;
 }
 
 .col-row {
 	max-width: 1280px;
 }
 
+.cs-hero{
+	padding-top: 120px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.cs-hgroup{
+	text-align: center;
+	margin-top: 65px;
+	margin-bottom: 20px;
+}
+
+.cs-title{
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+.cs-blurb{
+	font-size: 1.75em;
+}
+
 .cs-section-title{
 	font-size: 2em;
 	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .cs-subheader{
 	font-size: 1.5em;
 	font-weight: 700;
+	margin-bottom: 10px;
 }
 
 .cs-h3{
@@ -73,9 +135,13 @@ figure{
 	width: 780px;
 }
 
+.side-cap{
+	width: 900px;
+}
+
 .cs-quote-section{
 	width: 900px;
-	padding-top: 80px;
+	padding-top: 50px;
 	padding-bottom: 40px;
 }
 
@@ -96,4 +162,41 @@ figure{
 	background-color: #fff;
 	width: 500px;
 	margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+.fa-chevron-right{
+	font-size: .7em !important;
+	position: relative;
+	top: -2px;
+	padding: 0 5px;
+}
+
+.side-caption{
+	max-width: 390px;
+	text-align: left;
+	line-height: 1.5;
+	position: relative;
+	left: 24px;
+	margin-top: 0;
+	float: right;
+}
+
+.big {
+	float: right;
+	width: 250px;
+}
+
+.side-cap img{
+	max-width: 645px;
+}
+
+.cs-dlist-container{
+	padding: 50px;
+	background-color: #eafee1;
+}
+
+.footnote p{
+	font-size: .8em;
+	line-height: 1.3;
 }
