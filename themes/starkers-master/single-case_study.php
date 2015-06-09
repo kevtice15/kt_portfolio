@@ -22,7 +22,7 @@ $r = hexdec(substr($color, 1, 2));
 $g = hexdec(substr($color, 3, 2));
 $b = hexdec(substr($color, 5, 2));
 ?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-portfolio-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-case_study-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <div class="navbar">
@@ -37,51 +37,18 @@ $b = hexdec(substr($color, 5, 2));
         </ul>
     </nav>
 </div>
-<div class="portfolio-marquee">
-	<?php echo wp_get_attachment_image($mypost[marquee_image][0], 'full');?>
-	<hgroup class="portfolio-header">
-		<h2 class="portfolio-title"><?php the_title(); ?></h2>
-		<h3 class="portfolio-category"><?php get_the_category_by_ID($portfoliopost[category][0]); ?></h3>
-		<h3 class="portfolio-blurb"><?php echo $mypost[blurb][0]; ?></h3>
+<div class="casestudy-hero">
+	<?php echo wp_get_attachment_image($mypost[hero_image][0], 'full');?>
+	<hgroup class="casestudy-header">
+		<h2 class="casestudy-title"><?php the_title(); ?></h2>
+		<h3 class="casestudy-blurb"><?php echo $mypost[blurb][0]; ?></h3>
 	</hgroup>
 </div>
-<div class="body-container-portfolio" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
-	<p class="portfolio-spiel"><?php echo get_the_content(); ?></p>
-	<div class="project-section">
+<div class="body-container-casestudy" style= "background-color: rgba(<?php echo $r; ?> ,<?php echo $g; ?>, <?php echo $b; ?>, .4)">
+	<div class="casestudy-section">
 		<div class="col-row">
-			<div class="col-40 left">
-				<div class="project-section-title">
-					<p>PROMPT</p>
-				</div>
-				<div class="project-section-content">
-					<p><?php echo get_field('prompt'); ?></p>
-				</div>
-				<div class="project-section-title">
-					<p>DURATION</p>
-				</div>
-				<div class="project-section-content">
-					<p><?php echo get_field('duration'); ?></p>
-				</div>
-				<div class="project-section-title">
-					<p>COLLABORATORS</p>
-				</div>
-				<div class="project-section-content collabs">
-					<p><?php echo get_field('group_members'); ?></p>
-				</div>
-			</div>
-			<div class="col-80">
-				<div class="project-section-title">
-					<p>PRODUCT</p>
-				</div>
-				<div class="project-section-content">
-					<p><?php echo get_field('product'); ?></p>
-				</div>
-				<div class="project-section-title">
-					<p>PROCESS</p>
-				</div>
-				<div class="project-section-content">
-					<p><?php echo get_field('process'); ?></p>
-				</div>
+			<div class="casestudy-section-content">
+				<p class="casestudy-spiel"><?php echo get_the_content(); ?></p>
 			</div>
 		</div>
 	</div>

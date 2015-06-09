@@ -1,0 +1,99 @@
+body{
+	padding-bottom: 50px;
+}
+
+
+h1{
+	font-size: 4em; /* 64px / 16px = 4em */
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: #585858;
+}
+
+h2{
+	font-size: 2em; /* 36px / 16px = 2.25em */
+	font-family:'Lato', sans-serif;
+	font-weight: 300;
+	color: #585858;
+}
+
+h3,
+h4{
+	font-size: 2em; /* 32px / 16px = 2.25em */
+	font-family:'Lato', sans-serif;
+	font-weight: 300;
+	color: #585858;
+}
+
+li,
+p{
+	font-size: 1.1em; /* 18px / 16px = 1.125em */
+	font-family:'Muli', sans-serif;
+	font-weight: 300;
+	color: #585858;
+	padding-bottom: 30px;
+	line-height: 2.1em;
+}
+	
+a{
+	text-decoration: none;
+	font-family: 'Muli', sans-serif;
+	color: #31a9d2;
+}
+
+section,
+figure{
+	margin: 0 auto;
+}
+
+.col-row {
+	max-width: 1280px;
+}
+
+.cs-section-title{
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.cs-subheader{
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.cs-h3{
+	font-size: 1.05em;
+	font-weight: 700;
+}
+
+.cs-text-section{
+	width: 640px;
+}
+
+.cs-img-section{
+	width: 780px;
+}
+
+.cs-quote-section{
+	width: 900px;
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+
+.cs-quote-section p{
+	text-align: center;
+	font-style: italic;
+	font-size: 1.75em;
+	color: #72b04a;
+}
+
+.behind-line{
+	position: relative;
+ 	top: 44px;
+}
+
+.in-front{
+	text-align: center;
+	background-color: #fff;
+	width: 500px;
+	margin: 0 auto;
+}

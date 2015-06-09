@@ -33,8 +33,8 @@ nav,
 li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
 .group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
 body 				{ background:#fff; /* Don't forget to style your body to avoid user overrides */ }
-::-moz-selection 	{ background:#ff0; color:#333; }
-::selection 		{ background:#ff0; color:#333; }
+::-moz-selection 	{ background:#7db8ec; color:#333; }
+::selection 		{ background:#7db8ec; color:#333; }
 
 /* ---------------------------------------------------------------------------------------------------------- 
 02 Typography -----------------------------------------------------------------------------------------------
@@ -92,6 +92,11 @@ h2{
 	font-family:'Titillium Web', sans-serif;
 	font-weight: 300;
 	color: #585858;
+}
+
+.front-page-text{
+	font-size: 3em; /* 36px / 16px = 2.25em */
+	font-weight: 700;
 }
 
 h3,
@@ -204,8 +209,8 @@ blockquote{
 }
 
 .sidebar{
-	background-color: #EEE;
-	padding: 10px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .desktop-cright,
