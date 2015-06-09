@@ -828,6 +828,11 @@ DESKTOP
 		margin-right: 1%;
 	}
 
+	.col-fw{
+		width: 100%;
+		display:inline-block;
+	}
+
 
 	.col-25{
 		width: 33%;
@@ -880,7 +885,21 @@ DESKTOP
 		float: right;
 	}
 
+	.cs-text{
+		margin: 0 auto;
+	}
 
+	.cs-text p{
+		text-align: center;
+	}
+
+	.cs-title{
+		font-size: 2em;
+	}
+
+	.cs-blurb{
+		font-size: 1.4em;
+	}
 
 
 	.project-placeholder{

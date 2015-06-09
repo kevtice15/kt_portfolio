@@ -44,6 +44,55 @@ $resume_page_id = 31;
         </ul>
     </div>
     <div class="main-content">
+        <h3 class="sidebar-header">Case Study:</h3>
+            <ul class="casestudy-list">
+            <?php
+                $i = 0;
+                $type = 'case_study';
+                $args = array(
+                    'post_type' => $type,
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                    'caller_get_posts' => 1
+                );
+                $query = null;
+                $query = new WP_Query($args);
+                if($query->have_posts()){
+                    while($query->have_posts()) : $query->the_post(); ?>
+                    <?php
+                    $cs_post = get_post_custom(get_the_id()); 
+                    // echo '<li><a href=' . get_permalink() . '><div class="order-outer"><div class="round"><img class="nnationpic">' . wp_get_attachment_image($portfoliopost[image][0]) . '</img></div><span>' . get_the_title() . '</span></div></a></li>';
+                    //print_r($portfoliopost);
+                    // if(($i % 2) == 0){
+                    //     echo '<div>';
+                    // }
+                    echo'
+                        <li class="col-fw">
+                            <a href=' . get_permalink() . '>
+                                <div class="cs-marquee">
+                                    ' . wp_get_attachment_image($cs_post[front_page_image][0], 'full') . '
+                                </div>
+                            </a>
+                            <div class="cs-text">
+                                <p class="cs-title">' . $cs_post[title][0] . '</p>
+                                <p class="cs-blurb">' . $cs_post[blurb][0] . '</p>' .
+                                //<hr />
+                                //<p class="project-category">' . get_the_category_by_ID($portfoliopost[category][0]) . '</p>
+                           '</div>
+                        </li>';
+                    // if(($i % 2) != 0){
+                    //     echo '</div>';
+                    // }
+                    // $i++;
+                    endwhile;
+                    // if(($i % 2) == 0){
+                    //     echo '</div>';
+                    // }
+                    }
+                    wp_reset_query();
+                    wp_reset_postdata();
+            ?>
+        </ul>
         <h3 class="sidebar-header">Things I've Done:</h3>
         <ul class="project-list">
             <?php
